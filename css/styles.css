@@ -1,3 +1,7 @@
+/*----------------------*/
+/*--------Fonts---------*/
+/*----------------------*/
+
 @font-face {
   font-family: 'Caveat';
   src: url('../fonts/Caveat/static/Caveat-Regular.ttf');
@@ -7,6 +11,24 @@
   font-family: 'Bree-Serif';
   src: url('../fonts/Bree_Serif/BreeSerif-Regular.ttf');
 }
+
+.comfortaa-a {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.afacadad-a {
+  font-family: "Afacad", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*------------------------*/
+/*--------General---------*/
+/*------------------------*/
 
 .white-svg {
   fill: white !important;
@@ -28,7 +50,13 @@ html {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-color: #1b1a1a;
+  background-repeat: no-repeat;
 }
+
+/*----------------------*/
+/*--------Cover---------*/
+/*----------------------*/
 
 #intro {
   width: 100%;
@@ -36,14 +64,19 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 325px;
 }
 
 #i-main {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 #i-m-center {
-  position: relative;
+  max-width: 100%;
+  text-align: center;
 }
 
 #i-m-c-profile {
@@ -56,14 +89,14 @@ html {
 
 #i-m-c-name {
   margin-top: 30px;
-  color: rgb(255, 247, 241);
+  color: rgb(255, 251, 248);
   font-family: 'Caveat';
   font-size: 48px;
 }
 
 #i-m-c-quote {
   margin-top: 20px;
-  color: rgb(255, 247, 241);
+  color: rgb(255, 251, 248);
   font-family: 'Bree-Serif';
   font-size: 17px;
 }
@@ -85,14 +118,15 @@ html {
   background-color: #1b1a1a;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
 }
 
 .grid-item {
-  padding: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
   text-align: center;
-  height: 30em;
-  
+  height: auto; /*Careful with this!!!!!!*/
+  background-color: #1b1a1a;
 }
 
 /*--------Welcome---------*/
@@ -100,8 +134,13 @@ html {
 
 #c-welcome {
   padding: 20px;
-  color: rgb(255, 247, 241);
+  color: rgb(255, 251, 248);
   text-align: center;
+}
+
+#c-w-title {
+  font-family: "Comfortaa";
+  color: rgb(237, 131, 1);
 }
 
 #c-w-box {
@@ -110,31 +149,49 @@ html {
   margin-top: 30px;
 }
 
-#c-w-l1 {
-  margin-top: 1.5em;
+#c-w-subtitle {
+  font-family: "Comfortaa";
+}
+
+#c-w-update {
+  font-family: "Afacad";
+  color: rgb(179, 179, 179);
+}
+
+#c-w-subtitle-2 {
+  margin-top: 1.6em;
+  font-family: "Comfortaa";
+  color: rgb(238, 172, 92);
 }
 
 #c-w-b-links-1 {
-  margin-top: 2em;
-  margin-bottom: 1.6em;
+  margin-top: 1.6em;
+  margin-bottom: 1.1em;
   filter: invert(0.9);
 }
 
 #c-w-l2 {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
+  font-family: "Afacad";
+  font-size: large;
 }
 
 #c-w-b-links-2 {
   margin-top: 1.5em;
-  margin-bottom: 2em;
   filter: invert(0.9);
+}
+
+#c-w-l3 {
+  font-family: "Afacad";
+  font-size: large;
+  color: rgb(179, 179, 179);
 }
 
 /*--------About-Me---------*/
 
 #c-about-me {
   padding: 20px;
-  color: rgb(255, 247, 241);
+  color: rgb(255, 251, 248);
   text-align: center;
 }
 
@@ -143,8 +200,24 @@ html {
   width: auto;
 }
 
+#c-a-title {
+  font-family: "Comfortaa";
+  color: rgb(237, 131, 1);
+}
+
+#c-a-l0 {
+  font-family: "Afacad";
+}
+
+#c-a-l1 {
+  font-family: "Afacad";
+  color: rgb(179, 179, 179);
+}
+
 #c-a-subtitle {
-  margin-top: 1.5em;
+  margin-top: 1.2em;
+  font-family: "Comfortaa";
+  color: rgb(238, 172, 92);
 }
 
 #c-a-b-items {
@@ -152,10 +225,82 @@ html {
   margin-top: 1em;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
+  font-family: "Afacad";
 }
 
 #c-a-subtitle-2 {
-  margin-top: 1.3em;
+  margin-top: 1.2em;
+  font-family: "Comfortaa";
+  color: rgb(238, 172, 92);
+  margin-bottom: 0.5em;
+}
+
+#c-a-l2 {
+  margin-top: 0.2em;
+  font-family: "Afacad";
+}
+
+/*---------------------------*/
+/*--------Choice-Bar---------*/
+/*---------------------------*/
+
+#choice-bar {
+  padding-top: 4em;
+  background-color: #1b1a1a;
+  color: rgb(255, 251, 248);
+  font-family: "Afacad";
+  height: 4em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 325px;
+}
+
+#cb-options {
+  display: flex;
+  gap: 20px;
+}
+
+.cb-o-item {
+  padding: 10px 20px;
+  color: white;
+  background-color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cb-o-item:hover {
+  transform: scale(1.1);
+  background-color: #555;
+}
+
+@media (max-width: 350px) {
+  #cb-options {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*-------------------------*/
+/*--------Displays---------*/
+/*-------------------------*/
+
+/*--------Bottom-Up-1a---------*/
+
+#c-bup-1a {
+  padding: 20px;
+  color: rgb(255, 251, 248);
+  text-align: center;
+}
+
+/*--------Bottom-Up-1b---------*/
+
+#c-bup-1b {
+  padding: 20px;
+  color: rgb(255, 251, 248);
+  text-align: center;
 }
 
 /*---------------------------*/
@@ -192,8 +337,50 @@ html {
 /*-------Screen-Media--------*/
 /*---------------------------*/
 
+
 @media screen and (max-width: 768px) {
   #container {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+/*
+@media screen and (max-width: 1300px) and (min-width: 900px) { 
+  .grid-item {
+    height: 34em;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 750px) { 
+  .grid-item {
+    height: 40em;
+  }
+}
+
+@media screen and (max-width: 750px) and (min-width: 460px) { 
+  .grid-item {
+    height: 32em;
+  }
+  #container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 460px) and (min-width: 400px) { 
+  .grid-item {
+    height: 40em;
+  }
+  #container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 400px) { 
+  .grid-item {
+    height: 42em;
+  }
+  #container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+*/
