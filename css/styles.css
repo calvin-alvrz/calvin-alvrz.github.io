@@ -125,7 +125,7 @@ html {
   padding-right: 20px;
   padding-left: 20px;
   text-align: center;
-  height: auto; /*Careful with this!!!!!!*/
+  height: auto;
   background-color: #1b1a1a;
 }
 
@@ -222,6 +222,9 @@ html {
 
 #c-a-b-items {
   align-items: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 1em;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
@@ -246,6 +249,7 @@ html {
 
 #choice-bar {
   padding-top: 4em;
+  padding-bottom: 4em;
   background-color: #1b1a1a;
   color: rgb(255, 251, 248);
   font-family: "Afacad";
@@ -333,6 +337,26 @@ html {
   background-image: url('../images/icon-arrow-up-active.svg');
 }
 
+/*------------------------*/
+/*-------Navigation-------*/
+/*------------------------*/
+
+#navigation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#navigation img {
+  width: 2.5em; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 2em; /* Adjust spacing between images */
+}
+
 /*---------------------------*/
 /*-------Screen-Media--------*/
 /*---------------------------*/
@@ -340,47 +364,12 @@ html {
 
 @media screen and (max-width: 768px) {
   #container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 90%;
   }
-}
 
-/*
-@media screen and (max-width: 1300px) and (min-width: 900px) { 
-  .grid-item {
-    height: 34em;
+  #navigation {
+    top: 50%;
+    left: 100%;
+    transform: translate(-160%, -50%);
   }
 }
-
-@media screen and (max-width: 900px) and (min-width: 750px) { 
-  .grid-item {
-    height: 40em;
-  }
-}
-
-@media screen and (max-width: 750px) and (min-width: 460px) { 
-  .grid-item {
-    height: 32em;
-  }
-  #container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media screen and (max-width: 460px) and (min-width: 400px) { 
-  .grid-item {
-    height: 40em;
-  }
-  #container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media screen and (max-width: 400px) { 
-  .grid-item {
-    height: 42em;
-  }
-  #container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-*/
