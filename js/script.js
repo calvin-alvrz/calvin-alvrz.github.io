@@ -9,8 +9,11 @@ adjustBackgroundPosition();
 // Listen for scroll events
 window.addEventListener('scroll', adjustBackgroundPosition);
 
-
 const scrollToTopButton = document.getElementById('scrollToTopButton');
+const navigationBar = document.getElementById('navigation');
+const windowHeight = window.innerHeight;
+
+const navigationThreshold = windowHeight * 0.7;
 
 // Show scroll to top button after scrolling down a bit
 window.addEventListener('scroll', () => {
@@ -18,6 +21,12 @@ window.addEventListener('scroll', () => {
     scrollToTopButton.style.display = 'block';
   } else {
     scrollToTopButton.style.display = 'none';
+  }
+
+  if (window.scrollY > navigationThreshold) {
+    navigationBar.style.display = 'flex';
+  } else {
+    navigationBar.style.display = 'none';
   }
 });
 
