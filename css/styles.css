@@ -316,16 +316,109 @@ html {
 /*-------Navigation-------*/
 /*------------------------*/
 
+#navContainer {
+  position: fixed;
+  left: 50%;
+  top: -5.4em;
+  transform: translateX(-50%);
+  transition: top 0.3s ease;
+}
+
+#navContainer:hover {
+  top: -1em;
+}
+
 #navigation {
   position: fixed;
-  top: 50%;
+  top: 1em;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 251, 248);
+  padding: 0.8em 1.2em;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.n-button {
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0 0.5em;
+  border: none;
+  background: none;
+  transition: transform 0.3s ease;
+}
+
+.n-button.active {
+  filter: brightness(0.7);
+}
+
+.n-button:hover { 
+  transform: scale(1.1);
+}
+
+#icon-graduate.active,
+#icon-graduate:hover {
+  content: url("../images/icon-graduate.png");
+}
+
+#icon-work.active,
+#icon-work:hover {
+  content: url("../images/icon-work.png");
+}
+
+#icon-pc.active,
+#icon-pc:hover {
+  content: url("../images/icon-pc.png");
+}
+
+#icon-question.active,
+#icon-question:hover {
+  content: url("../images/icon-question.png");
+}
+
+/*---------Pull-Nav--------*/
+
+#pullNav {
+  position: absolute;
+  top: 4.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  padding: 1em 1em 0.2em;
+  border-radius: 15px;
+  background-color: rgb(31, 31, 31);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+#icon-down {
+  width: 2em;
+  margin: 0 1em;
+  border: none;
+  background: none;
+}
+
+/*-------------------------------*/
+/*-------Mobile-Navigation-------*/
+/*-------------------------------*/
+
+#mobileNav {
+  position: fixed;
+  bottom: 4.2em;
+  right: 1.6em;
+}
+
+#m-navigation {
   display: none;
   flex-direction: column;
-  align-items: center;
+  transform: none;
   transition: background-image 0.2s ease;
   animation: fadeInOut 2.5s ease forwards;
+  background-color: transparent;
 }
 
 @keyframes fadeInOut {
@@ -333,16 +426,45 @@ html {
   100% { opacity: 1; }
 }
 
-#navigation img {
+.m-n-button {
   width: 2.5em;
   height: auto; 
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 2em;
   filter: brightness(0) invert(0.94);
+  transition: transform 0.3s ease;
+}
+
+.m-n-button.active {
+  filter: brightness(1);
+}
+
+#m-icon-graduate.active {
+  content: url("../images/icon-graduate.png");
+}
+
+#m-icon-work.active {
+  content: url("../images/icon-work.png");
+}
+
+#m-icon-pc.active {
+  content: url("../images/icon-pc.png");
+}
+
+#m-icon-question.active {
+  content: url("../images/icon-question.png");
 }
 
 /*---------------------------*/
 /*-------Screen-Media--------*/
 /*---------------------------*/
+
+@media screen and (min-width: 768px) {
+  #mobileNav {
+    display: none;
+  }
+}
 
 
 @media screen and (max-width: 768px) {
@@ -354,14 +476,8 @@ html {
     grid-template-columns: 90%;
   }
 
-  #navigation {
-    top: auto;
-    right: auto;
-    left: auto;
-    bottom: auto;
-    bottom: 4.7em;
-    right: 1.65em;
-    transform: none;
+  #navContainer {
+    display: none;
   }
 }
 

@@ -123,11 +123,25 @@ Pellentesque placerat risus viverra, viverra arcu ut, mattis risus. Phasellus ma
 
     <button id="scrollToTopButton"></button>
 
-    <div id="navigation">
-      <img src="./images/icon-graduate.svg">
-      <img src="./images/icon-work.svg">
-      <img src="./images/icon-pc.svg">
-      <img src="./images/icon-question.svg">
+    <div id="navContainer">
+      <div id="navigation">
+        <a><img id="icon-graduate" class="n-button" src="./images/icon-graduate.svg" data-hover="../images/icon-graduate.png" onclick="toggleActive('icon-graduate')"></a>
+        <a><img id="icon-work" class="n-button" src="./images/icon-work.svg" data-hover="../images/icon-work.png" onclick="toggleActive('icon-work')"></a>
+        <a><img id="icon-pc" class="n-button" src="./images/icon-pc.svg" data-hover="../images/icon-pc.png" onclick="toggleActive('icon-pc')"></a>
+        <a><img id="icon-question" class="n-button" src="./images/icon-question.svg" data-hover="../images/icon-question.png" onclick="toggleActive('icon-question')"></a>
+      </div>
+      <div id="pullNav">
+        <img id="icon-down" src="./images/icon-down.svg">
+      </div>
+    </div>
+
+    <div id="mobileNav">
+      <div id="m-navigation">
+        <a><img id="m-icon-graduate" class="m-n-button" src="./images/icon-graduate.svg" data-hover="../images/icon-graduate.png" onclick="mobileToggleActive('m-icon-graduate')"></a>
+        <a><img id="m-icon-work" class="m-n-button" src="./images/icon-work.svg" data-hover="../images/icon-work.png" onclick="mobileToggleActive('m-icon-work')"></a>
+        <a><img id="m-icon-pc" class="m-n-button" src="./images/icon-pc.svg" data-hover="../images/icon-pc.png" onclick="mobileToggleActive('m-icon-pc')"></a>
+        <a><img id="m-icon-question" class="m-n-button" src="./images/icon-question.svg" data-hover="../images/icon-question.png" onclick="mobileToggleActive('m-icon-question')"></a>
+      </div>
     </div>
 
     <!-- Dynamic JavaScript -->
