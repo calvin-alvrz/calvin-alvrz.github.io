@@ -276,6 +276,8 @@ html {
   text-align: center;
   height: auto;
   background-color: #1b1a1a;
+  color: white;
+  /*display: none;*/
 }
 
 #container-display p {
@@ -473,7 +475,7 @@ html {
   }
 
   #container, #container-display {
-    grid-template-columns: 90%;
+    grid-template-columns: 85%;
   }
 
   #navContainer {

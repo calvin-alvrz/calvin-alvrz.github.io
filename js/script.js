@@ -9,18 +9,46 @@ function toggleActive(id) {
   const button = document.getElementById(id);
   const isActive = button.classList.contains('active');
   const buttons = document.querySelectorAll('.n-button');
+  const category = id.split('-')[1]; // Extract category from button id
 
   buttons.forEach(btn => btn.classList.remove('active'));
   button.classList.toggle('active', !isActive);
+
+  // Hide all grid items
+  document.querySelectorAll('.cd-grid-item').forEach(item => {
+    item.style.display = 'none';
+  });
+
+  // Show grid items corresponding to the active category and button
+  if (!isActive) {
+    // Show grid items corresponding to the active category
+    document.querySelectorAll(`[id^=${category}]`).forEach(item => {
+      item.closest('.cd-grid-item').style.display = 'block';
+    });
+  }
 }
 
 function mobileToggleActive(id) {
   const button = document.getElementById(id);
   const isActive = button.classList.contains('active');
   const buttons = document.querySelectorAll('.m-n-button');
+  const category = id.split('-')[2]; // Extract category from button id
 
   buttons.forEach(btn => btn.classList.remove('active'));
   button.classList.toggle('active', !isActive);
+
+  // Hide all grid items
+  document.querySelectorAll('.cd-grid-item').forEach(item => {
+    item.style.display = 'none';
+  });
+
+  // Show grid items corresponding to the active category and button
+  if (!isActive) {
+    // Show grid items corresponding to the active category
+    document.querySelectorAll(`[id^=${category}]`).forEach(item => {
+      item.closest('.cd-grid-item').style.display = 'block';
+    });
+  }
 }
 
 const scrollToTopButton = document.getElementById('scrollToTopButton');
