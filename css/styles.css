@@ -280,8 +280,85 @@ html {
   /*display: none;*/
 }
 
-#container-display p {
-  color: white;
+/*---University-Coursework---*/
+
+#graduate-1a {
+
+}
+
+#cd-title {
+  font-family: "Comfortaa";
+  color: rgb(237, 56, 1);
+}
+
+#cd-subtitle {
+  font-family: "Comfortaa";
+}
+
+#cd-courses {
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+#cd-link {
+  font-family: "Afacad";
+  color: grey;
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.cd-c-item {
+  padding-bottom: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.cd-c-item:hover {
+  background-color: #282626;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.cd-c-i-project {
+  display: none;
+  text-align: left;
+  margin-left: 1.5em;
+  margin-top: 1em;
+}
+
+.cd-c-item:hover h3.cd-c-i-title {
+  color: #e12c18;
+}
+
+.cd-c-item:active p.cd-c-i-project {
+  display: block;
+}
+
+.cd-c-i-title {
+  font-size: 20px;
+  font-family: "Comfortaa";
+  color: rgb(237, 124, 68);
+  text-align: left;
+  margin-bottom: 0.3em;
+  padding-top: 1em;
+  margin-left: 0.5em;
+}
+
+.cd-c-i-desc {
+  font-family: "Afacad";
+  text-align: left;
+  margin-left: 1.5em;
+}
+
+.cd-c-i-subs {
+  font-family: "Afacad";
+  color: rgb(207, 207, 207);
+  text-align: right;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
 }
 
 /*---------------------------*/
